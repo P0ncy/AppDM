@@ -21,28 +21,28 @@ export class HomePage {
     });
   }
 
-  addInfo() {
+  /*addInfo() {
     this.router.navigate(['/add-info']);
-  }
+  }*/
 
-  edit(key) {
+  edit(key: string) {
     this.router.navigate(['/edit/'+key]);
   }
   
-  async delete(key) {
+  async delete(key: string) {
     const alert = await this.alertController.create({
-      header: 'Confirm!',
-      message: 'Are you sure want to delete this info?',
+      header: 'Confirmation',
+      message: 'Etes-vous sure de vouloir supprimmer ce pense-bête?',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Annuler',
           role: 'cancel',
           cssClass: 'secondary',
           handler: (blah) => {
             console.log('cancel');
           }
         }, {
-          text: 'Okay',
+          text: 'Oui',
           handler: () => {
             firebase.database().ref('infos/'+key).remove();
           }

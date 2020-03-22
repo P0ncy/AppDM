@@ -3,20 +3,20 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Create Info</ion-title>
+    <ion-title>Créer un nouveau pense-bête</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <form [formGroup]="infoForm">
     <ion-item>
-      <ion-label position="floating">Info Title</ion-label>
+      <ion-label position="floating">Titre</ion-label>
       <ion-input type="text" formControlName="info_title"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Info Description</ion-label>
+      <ion-label position="floating">Description</ion-label>
       <ion-input type="text" formControlName="info_description"></ion-input>
     </ion-item>
-    <ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveInfo()">Save</ion-button>
+    <ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveInfo()">Enregistrer</ion-button>
   </form>
 </ion-content>

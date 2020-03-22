@@ -1,11 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Info List
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title style="text-align: center;">
+      Vos pense-bêtes
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
-    </ion-buttons>
+      <ion-button routerLink="/create">Ajouter<ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
@@ -17,8 +20,8 @@
         {{info.info_title}}
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="primary" (click)="edit(info.key)">EDIT</ion-item-option>
-        <ion-item-option color="danger" (click)="delete(info.key)">DELETE</ion-item-option>
+        <ion-item-option color="primary" (click)="edit(info.key)">Modifier</ion-item-option>
+        <ion-item-option color="danger" (click)="delete(info.key)">Supprimer</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
